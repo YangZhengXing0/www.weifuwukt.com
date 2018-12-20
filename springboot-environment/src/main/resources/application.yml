@@ -1,0 +1,39 @@
+#springboot2.0 多环境配置 方式一：
+#spring:
+#  profiles:
+#    active: dev
+#server:
+#  port: 80
+
+#springboot2.0 多环境配置 方式二：
+#文档块区分为三个---
+spring:
+  profiles:
+    active: pro
+---
+server:
+  port: 80
+spring:
+  profiles: dev
+test: dev
+
+---
+server:
+  port: 80
+spring:
+  profiles: pro
+test: pro
+
+---
+server:
+  port: 80
+spring:
+  profiles: test
+test: test
+
+---
+server:
+  port: 80
+spring:
+  profiles: uat
+test: uat
