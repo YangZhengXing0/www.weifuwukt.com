@@ -1,0 +1,4 @@
+springboot 2.0 整合@Async实现异步调用
+注意：@Async实现异步调用，返回值是不能得到的，既然async=null
+访问:http://localhost/index  用的@Async实现的 不能拿到返回结果
+    http://localhost/hello  手写的线程  能拿到返回结果
