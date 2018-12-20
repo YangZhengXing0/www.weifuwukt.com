@@ -1,0 +1,4 @@
+sprinboot 整合日志  slf4j+aop+logback
+访问：http://localhost/index?username="yangzhengxing"&&password="123"
+
+注意：大公司一般要把日志记录下来，如MongoDB

@@ -1,0 +1,2 @@
+springboot2.0整合 jsp
+注意：如果启动出现404，则可用springboot:run启动尝试

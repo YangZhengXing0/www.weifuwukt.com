@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+   <bean class="service.impl.UserServiceImpl" id="userServiceImpl"/>
+   <!--切面类-->
+   <bean class="AopLogXml.AopLogXml" id="aopLogXml"/>
+   <!--aop配置-->
+   <aop:config>
+      <!--切入点表达式：拦截哪些方法-->
+      <aop:pointcut id="pt" expression="(execution(* service.impl.UserServiceImpl.add(..)))"/>
+      <!--切面-->
+      <aop:aspect ref="aopLogXml">
+         <!--前置通知：再目标方法前执行-->
+         <aop:before method="before" pointcut-ref="pt"/>
+         <!--后置通知:目标方法之后执行（始终执行)-->
+         <aop:after method="after" pointcut-ref="pt"/>
+         <!--返回后通知： 执行方法结束前执行(异常不执行)-->
+         <aop:after-returning method="afterReturning" pointcut-ref="pt"/>
+         <!--异常通知:  出现异常时候执行-->
+         <aop:after-throwing method="afterThrowing" pointcut-ref="pt"/>
+         <!--环绕通知： 环绕目标方法执行-->
+         <aop:around method="around" pointcut-ref="pt"/>
+      </aop:aspect>
+   </aop:config>
+   <!--
+     开启aop注解方式，此步骤不能少，这样java类中的aop注解才会生效
+  Spring的文档中这么写的：Spring AOP部分使用JDK动态代理或者CGLIB来为目标对象创建代理。如果被代理的目标实现了至少一个接口，
+  则会使用JDK动态代理。所有该目标类型实现的接口都将被代理。若该目标对象没有实现任何接口，则创建一个CGLIB代理。 所以，解决办法是，
+  如果用JDK动态代理，就必须为被代理的目标实现一个接口（要注意的地方是：需要将ctx.getBean()方法的返回值用接口类型接收）；
+  如果使用CGLIB强制代理，就必选事先将CGLIB包导入项目，设置proxy-target-Class属性为true
+  -->
+   <aop:aspectj-autoproxy proxy-target-class="true"/>
+</beans>
