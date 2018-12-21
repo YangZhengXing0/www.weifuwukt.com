@@ -1,1 +1,1 @@
-springboot 2.0 整合jdbcTemplate
+springboot 2.0 整合jdbcTemplate,公司用jdbc特别少，一般用jpa,mybatis，所以不用太多的去学习，用的时候在去随便看下就会了
