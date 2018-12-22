@@ -1,8 +1,7 @@
 package springmvc.emded.tomcat.config;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-import springmvc.emded.tomcat.config.RootConfig;
-import springmvc.emded.tomcat.config.WebConfig;
 
 /**
  * AbstractAnnotationConfigDispatcherServletInitializer这个类负责配置DispatcherServlet、
