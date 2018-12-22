@@ -1,0 +1,4 @@
+## spring mvc内嵌tomcat
+DispatcherServlet是Spring MVC的核心，每当应用接受一个HTTP请求，由DispatcherServlet负责将请求分发给应用的其他组件。
+在旧版本中，DispatcherServlet之类的servlet一般在web.xml文件中配置，该文件一般会打包进最后的war包种；但是Spring 3引入了注解，
+我们这节课讲解，如何基于注解配置Spring MVC。
