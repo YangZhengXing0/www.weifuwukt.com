@@ -1,4 +1,4 @@
-package ratelmiter;
+package ratelmiter.service;
 
 import org.springframework.stereotype.Service;
 
