@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <p>防止表单重复提交测试</p>
+    <!--<form action="/addUser" method="post">-->
+    <form action="/insert" method="post">
+       <input type="text" th:value="${token}" name="token"><br>
+        用户名：<input type="text" name="username"></br>
+        密码：<input type="text" name="password"></br>
+        <input type="submit"value="提交"></br>
+    </form>
+</body>
+</html>
