@@ -15,3 +15,7 @@ body参数：{"username":"insert1111","password":"1111"}</br>
 浏览器访问：http://localhost:9000/
 然后填写表单，点击提交，后发现添加成功，查看数据库，添加数据成功了,</br>
 最后在当前成功的页面右键重新加载，结果讲呈现：不能重复提交，则表明成功了</br>
+
+## 代码部分解释
+ @Pointcut("execution(* com.weifuwukt.apitoken.controller.IndexController.insert*(..))")中
+ insert*(..)表示：以insert开头的方法，参数为任意参数
