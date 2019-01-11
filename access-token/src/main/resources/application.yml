@@ -1,0 +1,13 @@
+server:
+  port: 9000
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: admin
+  redis:
+    host: 120.79.93.16
+logging:
+  level:
+    com.weifuwukt.accesstoken.mapper: debug
