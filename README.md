@@ -7,4 +7,4 @@
 4: springboot</br>
 5：nginx</br>
 6: 服务隔离、熔断、降级、限流</br>
-7：api接口安全设计、api接口限流、api接口隔离</br>
+7：api接口安全设计、api接口限流、api接口隔离、api接口幂等问题</br>
