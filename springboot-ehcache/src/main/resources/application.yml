@@ -8,7 +8,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: admin
-  # 缓存配置读取
+  # 缓存配置读取 这里ehcache2.x与3.x差别，这里注意下
   cache:
     jcache:
       config: classpath:/ehcache.xml
