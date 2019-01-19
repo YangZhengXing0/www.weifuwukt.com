@@ -8,9 +8,9 @@
 5: nginx</br>
 6: springcloud FS2版、服务隔离、熔断、降级、限流</br>
 7: api接口安全设计、api接口限流、api接口隔离、api接口幂等问题</br>
-8: redis(集群+哨兵+分片)
-9: web网络安全架构
-10:zookeeper
-11:分布式id、分布式锁、分布式sesion、分布式事务、分布式认证
+8: redis(集群+哨兵+分片)</br>
+9: web网络安全架构</br>
+10:zookeeper</br>
+11:分布式id、分布式锁、分布式sesion、分布式事务、分布式认证</br>
 
 
